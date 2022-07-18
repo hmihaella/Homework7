@@ -1,0 +1,150 @@
+body {
+  background: rgba(0, 0, 0, 0.2);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  background: radial-gradient(50% 50% at 50% 50%, #42454c 0%, #25282e 100%);
+  box-sizing: border-box;
+  position: fixed;
+  border-radius: 1rem;
+  width: 70vw;
+  height: 30rem;
+  padding: 0.5rem 1rem;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+body:hover {
+  background-color: bisque;
+}
+
+h1 {
+  color: white;
+  font-family: "Inter";
+  font-weight: bolder;
+  font-size: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-inline-start: 0.5rem;
+}
+
+.flip {
+  position: relative;
+}
+.flip span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+.btn-x {
+  background: #44444b;
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  transform: translate(50%, -50%);
+  border-radius: 2rem;
+  font-style: normal;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0rem 0.15rem 1rem black;
+  padding: 0.5rem 1rem;
+}
+
+.btn-x:active {
+  background-color: #1c3abd;
+  -webkit-transition: left 2s ease-in-out;s
+  -moz-transition: left 2s ease-in-out;
+  -ms-transition: left 2s ease-in-out;
+  -o-transition: left 2s ease-in-out;
+  transition: left 2s ease-in-out;
+}
+
+.btn-am {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-block-start: 0.7rem;
+  font-size: 1.1rem;
+  align-self: stretch;
+  text-align: center;
+}
+
+.btn-am:active {
+  cursor: pointer;
+  outline: none;
+  background-color: #3e8e41;
+  -webkit-transition: left 2s ease-in-out;
+  -moz-transition: left 2s ease-in-out;
+  -ms-transition: left 2s ease-in-out;
+  -o-transition: left 2s ease-in-out;
+  transition: left 2s ease-in-out;
+}
+
+.text {
+  color: white;
+  overflow: auto;
+  border-block-start: solid 0.1rem white;
+  border-block-end: solid 0.1rem white;
+  width: fit-content;
+  align-self: stretch;
+}
+
+.text::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.text::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 5rem;
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5rem;
+}
+
+@media (min-width: 375px) {
+  .btn-am {
+    background-color: white;
+  }
+  h1 {
+    font-size: 1.5rem;
+    flex: none;
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .btn-am {
+    background: #3d4450;
+    color: white;
+    align-self: flex-end;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+}
